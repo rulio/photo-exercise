@@ -4,6 +4,7 @@ var ExifImage = require('exif').ExifImage;
 
 module.exports = function exif_reader (){
     return {
+        // Return a Promise that will be fulfilled with the EXIF data from the file.
         read:function(filename){
             return new Promise(function(resolve,reject){
                 try {

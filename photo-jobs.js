@@ -4,6 +4,7 @@ module.exports = function photo_job (mongoose){
     var Job = mongoose.model('Job',{Key:{type:String,index:{unique:true}},Status:String,Filename:String,Exif:Object});
     return {
         // Create record in Jobs collection for item if it does not exist.
+        // initial Status is 'new'
         // Return doc that matches the item key.
         create: function (item) {
             var job = new Job({Key:item.Key,Status:'new'});
@@ -22,6 +23,7 @@ module.exports = function photo_job (mongoose){
                 return count > 0;
             });
         },
+        // Get the Status of the item.  if it is not in DB then return 'missing' status
         status:function(item){
             var self = this;
             return self.exists(item).then(function(exists){
