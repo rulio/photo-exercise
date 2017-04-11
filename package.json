@@ -1,0 +1,26 @@
+{
+  "name": "waldo-exercise",
+  "version": "1.0.0",
+  "description": "photo data processing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 15000"
+  },
+  "author": "Raul Reynoso",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "exif": "^0.6.0",
+    "moment": "^2.18.1",
+    "mongoose": "^4.9.4",
+    "path": "^0.12.7",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.2.0"
+  }
+}
